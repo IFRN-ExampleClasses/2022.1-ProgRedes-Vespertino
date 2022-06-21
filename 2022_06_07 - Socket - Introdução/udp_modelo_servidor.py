@@ -4,7 +4,6 @@ import socket, sys
 HOST = ''  #Definindo o IP do servidor
 PORT = 50000 #Definindo a porta
 
-# Criando o socket UDP
 udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 udp_socket.bind((HOST, PORT)) # Ligando o socket a porta
