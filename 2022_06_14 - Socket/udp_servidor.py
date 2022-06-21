@@ -2,10 +2,10 @@
 import sys, socket
 
 # Definindo as constantes do programa
-HOST        = 'localhost'   # Definindo o IP do servidor
-PORT        = 50000         # Definindo a porta
+HOST        = ''            # Definindo o IP do servidor
+PORT        = 65000         # Definindo a porta
 CODE_PAGE   = 'utf-8'       # Definindo a página de código de caracteres
-BUFFER_SIZE = 512           # Definindo o tamanho do buffer
+BUFFER_SIZE = 10            # Definindo o tamanho do buffer
 
 # Criando o socket UDP
 udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -13,6 +13,7 @@ udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 # Vincular o socket a tupla (host, port)
 udp_socket.bind((HOST, PORT)) 
 
+print(f'\nSERVIDOR ATIVO: {udp_socket.getsockname()}')
 print('\nRecebendo Mensagens...\n\n')
 
 try:
